@@ -1,0 +1,110 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to top, #e6378f, #2980b9, #dc1bb6, #b80fe7);
+			background-image: url(https://img.freepik.com/free-vector/realistic-neon-lights-background_23-2148907367.jpg);
+			background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+			height: 90vh;
+        }#thisforfrontpgbelow
+
+        canvas {
+            display: block;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(232, 212, 212);
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.5em;
+        }
+    </style>
+
+    <div class="container">
+        <h1>ClassEmoAnalytix</h1>
+        <p>Sentiment and Emotion Identification for Real-time Student Facial Expression</p>
+    </div>
+
+	<div class="carousel-item">
+		<img src="https://img.freepik.com/premium-photo/mockup-with-office-supplies-blue-background-empty-space-top-view-flat-lay-copy-space_604214-2511.jpg" alt="...">
+		<div class="carousel-caption d-none d-md-block">
+		  <h5>aaaaaaaaaaaaaaaaaa</h5>
+		  <p>ccccccccccc</p>
+		</div>
+	</div>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            const particles = [];
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            document.addEventListener('mousemove', function (e) {
+                createParticles(e.pageX, e.pageY);
+            });
+
+            function createParticles(x, y) {
+                const particleCount = 5; // Adjust the number of particles
+                for (let i = 0; i < particleCount; i++) {
+                    particles.push({
+                        x: x,
+                        y: y,
+                        size: Math.random() * 5 + 2, // Adjust the size range
+                        color: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.8)`,
+                        speedX: (Math.random() - 0.5) * 3, // Adjust the speed
+                        speedY: (Math.random() - 0.5) * 3
+                    });
+                }
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = 0; i < particles.length; i++) {
+                    ctx.fillStyle = particles[i].color;
+                    ctx.beginPath();
+                    ctx.arc(particles[i].x, particles[i].y, particles[i].size, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    particles[i].x += particles[i].speedX;
+                    particles[i].y += particles[i].speedY;
+                    particles[i].size -= 0.1;
+
+                    if (particles[i].size <= 0) {
+                        particles.splice(i, 1);
+                        i--;
+                    }
+                }
+
+                requestAnimationFrame(animateParticles);
+            }
+
+            animateParticles();
+
+            window.addEventListener('resize', function () {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        });
+    </script>
+

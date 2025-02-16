@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block style %}
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            transition: 0.5s;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        img{
+            width: 330px;
+            padding: 10px;
+            border-radius: 7%;
+            margin-top: 100px;
+        }
+        h1{
+            font-size: 70px;
+            padding-top: 20px;
+            font-family: 'Fredoka One', cursive;
+        }
+        p{
+            line-height: 30px;
+            font-size: 20px;
+            font-family: sans-serif;
+            color: #444;
+            padding-top: 20px;
+        }
+        .btn{
+            width: 250px;
+            height: 55px;
+            background-color: #1e8cda;
+            border: none;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn2{
+            width: 250px;
+            height: 55px;
+            background-color: transparent;
+            border: 2px solid #1e8cda;
+            font-size: 18px;
+            color: #1e8cda;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn2:hover{
+            background-color: #3692f4;
+            color: #fff;
+        }
+        .about-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-img img {
+            margin-top: 0%;
+            margin-left: 22%;
+            max-width: 100%; /* Make sure the image doesn't exceed its container */
+        }
+
+        .about-text {
+            max-width: 60%; /* Adjust the width of the text container as needed */
+            margin-right: 7%;
+        }
+
+</style>
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+<section class="about">
+    <h1 style="text-align: center;">About</h1>
+    <p style="font-weight: bold">
+        Welcome to ClassEmoAnalytix....
+      </p>
+      <hr>
+      <div class="about-info">
+        <div class="about-img">
+            <img src="https://www.southernliving.com/thmb/CzuBalMhp_jRAeZ0ytI6NB6znJw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Hourglass-MirageC-Getty-Images-2000-36c7e2433db941eb9908a9fde84fdbd9.jpg" alt="GeeksforGeeks">
+        </div>
+        <div class="about-text">
+            <p> where we're dedicated to understanding students beyond grades. Using advanced technology, we analyze real-time emotions and sentiments, providing invaluable insights into their learning journey. Join us in revolutionizing education with empathy and insight.
+            </p>
+            <button>Read More...</button>
+        </div>
+    </div>
+    
+    </div>
+</section>
+      <button class="btn"style="margin-left: 20%;">hi@finalyearproject.com</button>
+      <button class="btn"style="margin-left: 18%;">education@project2024.in</button>
+      <!-- <button class="btn2" style="margin-left: 18%;">enquire@project2024.in</button> -->
+{% endblock %}
+{% block footer %}
+{% endblock %}
