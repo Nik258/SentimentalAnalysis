@@ -4,6 +4,7 @@ ClassEmoAnalytix is a smart classroom analytics system that captures and analyze
 
 ---
 
+
 ## 🧠 Features
 
 - 🎥 Real-time face detection and emotion classification (Happy, Sad, Angry, etc.)
@@ -30,13 +31,4 @@ ClassEmoAnalytix is a smart classroom analytics system that captures and analyze
 ## 📸 Screenshots
 
 ### 🔍 Real-Time Emotion Detection
-![Login]("C:\Users\nikit\OneDrive\Pictures\anime\Emo-Login.jpg")
-
-### 📊 Analytical Dashboard
-![Registration]("C:\Users\nikit\OneDrive\Pictures\anime\emo registration.jpg")
-
-### 🧑‍💻 Home-Page
-![Home]("C:\Users\nikit\OneDrive\Pictures\anime\emo home.jpg")
-
-### 📊 Result-Report
-![Report]("C:\Users\nikit\OneDrive\Pictures\anime\emo rsult.jpg")
+![Emo-Analysis]()
