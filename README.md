@@ -31,4 +31,4 @@ ClassEmoAnalytix is a smart classroom analytics system that captures and analyze
 ## 📸 Screenshots
 
 ### 🔍 Real-Time Emotion Detection
-![Emo-Analysis]()
+![Emo-Analysis](https://github.com/Nik258/SentimentalAnalysis/blob/d54682c76509fc013f2e103b8f2f24cc004b7c25/design.pdf)
